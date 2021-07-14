@@ -26,15 +26,13 @@ def draw(file,name):
                        draw.point((y,x), (pix[i])) # рисуем по точкам
                        i = i + 1
                j = str(j)
-               image.save(f"F:\\fashion_mnist\\{name}\\{label}\\img{j}.jpg", "JPEG")
+               image.save(f"fashion_mnist\\{name}\\{label}\\img{j}.jpg", "JPEG")
                j = int(j)
                j = j + 1
            count += 1
     r_file.close()
 
-print("Введите расположение файла обучающей выборки: ")
-file1 = input()
-print("Введите расположение файла тестовой выборки: ")
-file2 = input()
+file1 = "fashion-mnist_train.csv"
+file2 = "fashion-mnist_test.csv"
 draw(file1,"train")
 draw(file2,"test")
